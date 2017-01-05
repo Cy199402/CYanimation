@@ -58,6 +58,7 @@
 		48C84D531E1DF02E00F103A7 /* CYAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				48C84D6C1E1DF2E600F103A7 /* Animation */,
 				48C84D571E1DF02E00F103A7 /* AppDelegate.h */,
 				48C84D581E1DF02E00F103A7 /* AppDelegate.m */,
 				48C84D5A1E1DF02E00F103A7 /* ViewController.h */,
@@ -77,6 +78,29 @@
 				48C84D551E1DF02E00F103A7 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48C84D6C1E1DF2E600F103A7 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				48C84D6D1E1DF36A00F103A7 /* ChatHallMusic */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
+		48C84D6D1E1DF36A00F103A7 /* ChatHallMusic */ = {
+			isa = PBXGroup;
+			children = (
+				48C84D6E1E1DF37500F103A7 /* View */,
+			);
+			name = ChatHallMusic;
+			sourceTree = "<group>";
+		};
+		48C84D6E1E1DF37500F103A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +336,7 @@
 				48C84D6A1E1DF02E00F103A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
