@@ -13,6 +13,7 @@
 		48C84D5F1E1DF02E00F103A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C84D5D1E1DF02E00F103A7 /* Main.storyboard */; };
 		48C84D611E1DF02E00F103A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C84D601E1DF02E00F103A7 /* Assets.xcassets */; };
 		48C84D641E1DF02E00F103A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C84D621E1DF02E00F103A7 /* LaunchScreen.storyboard */; };
+		48C84D711E1E328300F103A7 /* MusicInOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D701E1E328300F103A7 /* MusicInOrderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		48C84D601E1DF02E00F103A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48C84D631E1DF02E00F103A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48C84D651E1DF02E00F103A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C84D6F1E1E328300F103A7 /* MusicInOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicInOrderView.h; path = Animation/ChatHallMusic/View/MusicInOrderView.h; sourceTree = "<group>"; };
+		48C84D701E1E328300F103A7 /* MusicInOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicInOrderView.m; path = Animation/ChatHallMusic/View/MusicInOrderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 		48C84D6E1E1DF37500F103A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				48C84D6F1E1E328300F103A7 /* MusicInOrderView.h */,
+				48C84D701E1E328300F103A7 /* MusicInOrderView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C84D711E1E328300F103A7 /* MusicInOrderView.m in Sources */,
 				48C84D5C1E1DF02E00F103A7 /* ViewController.m in Sources */,
 				48C84D591E1DF02E00F103A7 /* AppDelegate.m in Sources */,
 				48C84D561E1DF02E00F103A7 /* main.m in Sources */,
