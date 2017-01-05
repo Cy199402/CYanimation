@@ -61,6 +61,7 @@
 		48C84D531E1DF02E00F103A7 /* CYAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				48C84D721E1E360100F103A7 /* ThirdParties */,
 				48C84D6C1E1DF2E600F103A7 /* Animation */,
 				48C84D571E1DF02E00F103A7 /* AppDelegate.h */,
 				48C84D581E1DF02E00F103A7 /* AppDelegate.m */,
@@ -106,6 +107,13 @@
 				48C84D701E1E328300F103A7 /* MusicInOrderView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		48C84D721E1E360100F103A7 /* ThirdParties */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ThirdParties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
