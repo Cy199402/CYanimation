@@ -61,13 +61,15 @@
         textLabel.layer.borderWidth = 2.0f;
         textLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
         textLabel.textAlignment = NSTextAlignmentCenter;
-        [textLabel sizeToFit];
+        CGSize maxSize = CGSizeMake(100, 20);
+        CGSize expectSize = [textLabel sizeThatFits:maxSize];
         [self addSubview:textLabel];
         
+        uint16_t randomX = arc4random() % 40;
         textLabel.alpha = 1.0f;
-        textLabel.frame = CGRectMake(5, 120, 90, 20);
+        textLabel.frame = CGRectMake(5 + randomX, 120, expectSize.width + 8, expectSize.height + 2);
         [UIView animateWithDuration:3.0f animations:^{
-            textLabel.frame = CGRectMake(5, 0, 90, 20);
+            textLabel.frame = CGRectMake(5 + randomX, 0, expectSize.width + 8, expectSize.height + 2);
             textLabel.alpha = 0.0f;
         } completion:^(BOOL finished){
             if (finished) {
