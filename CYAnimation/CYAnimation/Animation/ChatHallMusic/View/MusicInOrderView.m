@@ -16,6 +16,8 @@
 @property (nonatomic, strong) UIView *albumView;
 @property (nonatomic, strong) UILabel *textLabel;
 @property (nonatomic, assign) uint32_t clickNum;
+@property (nonatomic, assign) NSTimeInterval oldTime;
+@property (nonatomic, assign) NSTimeInterval newTime;
 
 @end
 
@@ -25,6 +27,8 @@
     self = [super init];
     if (self) {
         self.clickNum = 0;
+        self.oldTime = 0;
+        self.newTime = 0;
         [self addSubviews];
         [self autoLayout];
     }
@@ -51,9 +55,23 @@
 }
 
 #pragma mark - action methods
+- (void)clickAlbumView {
+    if (self.oldTime == 0) {
+        self.oldTime = [[NSDate date] timeIntervalSince1970];
+        [self playAnimEffect];
+    } else {
+        self.newTime = [[NSDate date] timeIntervalSince1970];
+        if (self.newTime - self.oldTime > 0.2) { // 1秒钟最多点击5次
+            self.oldTime = self.newTime;
+            [self playAnimEffect];
+        }
+    }
+}
+
 - (void)playAnimEffect {
     self.clickNum ++;
     if (self.clickNum % 5 == 0) {
+        self.clickNum = 0;
         UILabel *textLabel = [[UILabel alloc] init];
         textLabel.text = @"没抢到";
         textLabel.layer.cornerRadius = 10.0f;
@@ -90,7 +108,6 @@
             }
         }];
     }
-
 }
 
 #pragma mark - setters and getters
@@ -126,7 +143,7 @@
     if (!_albumView) {
         _albumView = [[UIView alloc] init];
         _albumView.backgroundColor = [UIColor blueColor];
-        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playAnimEffect)];
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAlbumView)];
         [_albumView addGestureRecognizer:singleTap];
     }
     return _albumView;
