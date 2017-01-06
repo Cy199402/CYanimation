@@ -10,11 +10,12 @@
 
 @interface MusicInOrderView ()
 
-@property (nonatomic, strong) UIView *detailView;
 @property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) CAAnimationGroup *textAnimGroup;
 @property (nonatomic, strong) CAAnimationGroup *imgAnimGroup;
 @property (nonatomic, strong) UIView *albumView;
+@property (nonatomic, strong) UILabel *textLabel;
+@property (nonatomic, assign) uint32_t clickNum;
 
 @end
 
@@ -23,6 +24,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.clickNum = 0;
         [self addSubviews];
         [self autoLayout];
     }
@@ -50,17 +52,43 @@
 
 #pragma mark - action methods
 - (void)playAnimEffect {
-    [self addSubview:self.detailView];
-    self.detailView.alpha = 1.0f;
-    self.detailView.frame = CGRectMake(5, 120, 90, 20);
-    [UIView animateWithDuration:3.0f animations:^{
-        self.detailView.frame = CGRectMake(5, 0, 90, 20);
-        self.detailView.alpha = 0.0f;
-    } completion:^(BOOL finished){
-        if (finished) {
-            [self.detailView removeFromSuperview];
-        }
-    }];
+    self.clickNum ++;
+    if (self.clickNum % 5 == 0) {
+        UILabel *textLabel = [[UILabel alloc] init];
+        textLabel.text = @"没抢到";
+        textLabel.layer.cornerRadius = 10.0f;
+        textLabel.layer.borderColor = [UIColor purpleColor].CGColor;
+        textLabel.layer.borderWidth = 2.0f;
+        textLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
+        textLabel.textAlignment = NSTextAlignmentCenter;
+        [textLabel sizeToFit];
+        [self addSubview:textLabel];
+        
+        textLabel.alpha = 1.0f;
+        textLabel.frame = CGRectMake(5, 120, 90, 20);
+        [UIView animateWithDuration:3.0f animations:^{
+            textLabel.frame = CGRectMake(5, 0, 90, 20);
+            textLabel.alpha = 0.0f;
+        } completion:^(BOOL finished){
+            if (finished) {
+                [textLabel removeFromSuperview];
+            }
+        }];
+    } else {
+        uint16_t randomX = arc4random() % 50;
+        UILabel *noteLabel = [[UILabel alloc] initWithFrame:CGRectMake(5 + randomX, 120, 90, 20)];
+        noteLabel.text = @"hello";
+        [self addSubview:noteLabel];
+        [UIView animateWithDuration:3.0f animations:^{
+            noteLabel.frame = CGRectMake(5 + randomX, 0, 90, 20);
+            noteLabel.alpha = 0.0f;
+        } completion:^(BOOL finished){
+            if (finished) {
+                [noteLabel removeFromSuperview];
+            }
+        }];
+    }
+
 }
 
 #pragma mark - setters and getters
@@ -72,28 +100,11 @@
     return _bgView;
 }
 
-- (UIView *)detailView {
-    if (!_detailView) {
-        _detailView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 90, 20)];
-        _detailView.backgroundColor = [UIColor whiteColor];
-        _detailView.layer.cornerRadius = 4.0f;
-        UILabel *textLabel = [[UILabel alloc] init];
-        textLabel.text = @"抢不到！";
-        [_detailView addSubview:textLabel];
-        [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.centerY.centerX.equalTo(_detailView);
-        }];
-    }
-    return _detailView;
-}
-
 - (CAAnimationGroup *)imgAnimGroup {
     if (!_imgAnimGroup) {
         CABasicAnimation *transformAnim = [CABasicAnimation animationWithKeyPath:@"position"];
         transformAnim.fillMode = kCAFillModeForwards;
         transformAnim.removedOnCompletion = YES;
-        NSLog(@"self.albumView.frame.origin.x -- %f", self.albumView.frame.origin.x);
-        NSLog(@"self.albumView.frame.origin.y -- %f", self.albumView.frame.origin.y);
         transformAnim.fromValue = [NSValue valueWithCGPoint:CGPointMake(self.albumView.frame.origin.x + self.albumView.frame.size.width / 2, self.albumView.frame.origin.y + self.albumView.frame.size.height)];
         transformAnim.fromValue = [NSValue valueWithCGPoint:CGPointMake(self.albumView.frame.origin.x + self.albumView.frame.size.width / 2, self.albumView.frame.origin.y + self.albumView.frame.size.height + 200)];
         
