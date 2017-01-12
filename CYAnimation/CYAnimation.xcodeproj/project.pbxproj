@@ -104,6 +104,7 @@
 		48C84D531E1DF02E00F103A7 /* CYAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				48F0175B1E27628B005A2206 /* EncloseView */,
 				48F017491E276134005A2206 /* Resources */,
 				48C84D721E1E360100F103A7 /* ThirdParties */,
 				48C84D6C1E1DF2E600F103A7 /* Animation */,
@@ -208,6 +209,21 @@
 				48F017541E276194005A2206 /* room_musicBtn_bg@3x.png */,
 				48F017551E276194005A2206 /* room_musicBtn_opened@2x.png */,
 				48F017561E276194005A2206 /* room_musicBtn_opened@3x.png */,
+			);
+			name = RoomMusicButton;
+			sourceTree = "<group>";
+		};
+		48F0175B1E27628B005A2206 /* EncloseView */ = {
+			isa = PBXGroup;
+			children = (
+				48F0175C1E276296005A2206 /* RoomMusicButton */,
+			);
+			name = EncloseView;
+			sourceTree = "<group>";
+		};
+		48F0175C1E276296005A2206 /* RoomMusicButton */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = RoomMusicButton;
 			sourceTree = "<group>";
