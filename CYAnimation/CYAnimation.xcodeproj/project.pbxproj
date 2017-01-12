@@ -28,6 +28,7 @@
 		48F017581E276194005A2206 /* room_musicBtn_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F017541E276194005A2206 /* room_musicBtn_bg@3x.png */; };
 		48F017591E276194005A2206 /* room_musicBtn_opened@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F017551E276194005A2206 /* room_musicBtn_opened@2x.png */; };
 		48F0175A1E276194005A2206 /* room_musicBtn_opened@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F017561E276194005A2206 /* room_musicBtn_opened@3x.png */; };
+		48F0175F1E2765A1005A2206 /* RoomMusicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F0175E1E2765A1005A2206 /* RoomMusicButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,8 @@
 		48F017541E276194005A2206 /* room_musicBtn_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "room_musicBtn_bg@3x.png"; path = "Resources/RoomMusicButton/room_musicBtn_bg@3x.png"; sourceTree = "<group>"; };
 		48F017551E276194005A2206 /* room_musicBtn_opened@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "room_musicBtn_opened@2x.png"; path = "Resources/RoomMusicButton/room_musicBtn_opened@2x.png"; sourceTree = "<group>"; };
 		48F017561E276194005A2206 /* room_musicBtn_opened@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "room_musicBtn_opened@3x.png"; path = "Resources/RoomMusicButton/room_musicBtn_opened@3x.png"; sourceTree = "<group>"; };
+		48F0175D1E2765A1005A2206 /* RoomMusicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoomMusicButton.h; path = EncloseView/RoomMusicButton/RoomMusicButton.h; sourceTree = "<group>"; };
+		48F0175E1E2765A1005A2206 /* RoomMusicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoomMusicButton.m; path = EncloseView/RoomMusicButton/RoomMusicButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,8 @@
 		48F0175C1E276296005A2206 /* RoomMusicButton */ = {
 			isa = PBXGroup;
 			children = (
+				48F0175D1E2765A1005A2206 /* RoomMusicButton.h */,
+				48F0175E1E2765A1005A2206 /* RoomMusicButton.m */,
 			);
 			name = RoomMusicButton;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				48C84D5C1E1DF02E00F103A7 /* ViewController.m in Sources */,
 				48C84D8E1E1E69A600F103A7 /* MASConstraint.m in Sources */,
 				48C84D961E1E69A600F103A7 /* ViewController+MASAdditions.m in Sources */,
+				48F0175F1E2765A1005A2206 /* RoomMusicButton.m in Sources */,
 				48C84D901E1E69A600F103A7 /* MASLayoutConstraint.m in Sources */,
 				48C84D931E1E69A600F103A7 /* NSArray+MASAdditions.m in Sources */,
 				48C84D921E1E69A600F103A7 /* MASViewConstraint.m in Sources */,
