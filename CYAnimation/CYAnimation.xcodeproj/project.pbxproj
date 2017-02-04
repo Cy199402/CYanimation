@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		484C5EF61E45CAAC009E56DF /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484C5EF51E45CAAC009E56DF /* SwitchViewController.m */; };
 		48C84D561E1DF02E00F103A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D551E1DF02E00F103A7 /* main.m */; };
 		48C84D591E1DF02E00F103A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D581E1DF02E00F103A7 /* AppDelegate.m */; };
 		48C84D5C1E1DF02E00F103A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D5B1E1DF02E00F103A7 /* ViewController.m */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		484C5EF41E45CAAC009E56DF /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchViewController.h; path = SwitchViewController/SwitchViewController.h; sourceTree = "<group>"; };
+		484C5EF51E45CAAC009E56DF /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchViewController.m; path = SwitchViewController/SwitchViewController.m; sourceTree = "<group>"; };
 		48C84D511E1DF02E00F103A7 /* CYAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C84D551E1DF02E00F103A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48C84D571E1DF02E00F103A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		484C5EF31E45CA56009E56DF /* SwitchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				484C5EF41E45CAAC009E56DF /* SwitchViewController.h */,
+				484C5EF51E45CAAC009E56DF /* SwitchViewController.m */,
+			);
+			name = SwitchViewController;
+			sourceTree = "<group>";
+		};
 		48C84D481E1DF02E00F103A7 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +119,7 @@
 		48C84D531E1DF02E00F103A7 /* CYAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				484C5EF31E45CA56009E56DF /* SwitchViewController */,
 				48F0175B1E27628B005A2206 /* EncloseView */,
 				48F017491E276134005A2206 /* Resources */,
 				48C84D721E1E360100F103A7 /* ThirdParties */,
@@ -311,6 +324,7 @@
 			files = (
 				48C84D8F1E1E69A600F103A7 /* MASConstraintMaker.m in Sources */,
 				48C84D711E1E328300F103A7 /* MusicInOrderView.m in Sources */,
+				484C5EF61E45CAAC009E56DF /* SwitchViewController.m in Sources */,
 				48C84D5C1E1DF02E00F103A7 /* ViewController.m in Sources */,
 				48C84D8E1E1E69A600F103A7 /* MASConstraint.m in Sources */,
 				48C84D961E1E69A600F103A7 /* ViewController+MASAdditions.m in Sources */,

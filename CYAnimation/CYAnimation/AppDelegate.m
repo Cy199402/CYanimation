@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "SwitchViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     // 2.设置根ViewController
-    ViewController *mainVC = [[ViewController alloc] init];
+    SwitchViewController *mainVC = [[SwitchViewController alloc] init];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
     self.window.rootViewController = navVC;
     
