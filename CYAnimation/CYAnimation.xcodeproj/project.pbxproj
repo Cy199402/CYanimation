@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480CC98D1E52F17400FF471F /* MusicRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 480CC98C1E52F17400FF471F /* MusicRoomViewController.m */; };
 		484C5EF61E45CAAC009E56DF /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484C5EF51E45CAAC009E56DF /* SwitchViewController.m */; };
 		48C84D561E1DF02E00F103A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D551E1DF02E00F103A7 /* main.m */; };
 		48C84D591E1DF02E00F103A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D581E1DF02E00F103A7 /* AppDelegate.m */; };
@@ -25,6 +26,9 @@
 		48C84D941E1E69A600F103A7 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D871E1E69A600F103A7 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		48C84D951E1E69A600F103A7 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D891E1E69A600F103A7 /* View+MASAdditions.m */; };
 		48C84D961E1E69A600F103A7 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D8C1E1E69A600F103A7 /* ViewController+MASAdditions.m */; };
+		48CF304D1E55756B0049248C /* FlowerBezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF304C1E55756B0049248C /* FlowerBezierView.m */; };
+		48CF30521E5576A60049248C /* musicRoom_scatter_flower@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CF30501E5576A60049248C /* musicRoom_scatter_flower@2x.png */; };
+		48CF30531E5576A60049248C /* musicRoom_scatter_flower@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CF30511E5576A60049248C /* musicRoom_scatter_flower@3x.png */; };
 		48F017571E276194005A2206 /* room_musicBtn_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F017531E276194005A2206 /* room_musicBtn_bg@2x.png */; };
 		48F017581E276194005A2206 /* room_musicBtn_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F017541E276194005A2206 /* room_musicBtn_bg@3x.png */; };
 		48F017591E276194005A2206 /* room_musicBtn_opened@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F017551E276194005A2206 /* room_musicBtn_opened@2x.png */; };
@@ -33,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		480CC98B1E52F17400FF471F /* MusicRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicRoomViewController.h; path = EncloseView/RoomBezierAnim/MusicRoomViewController.h; sourceTree = "<group>"; };
+		480CC98C1E52F17400FF471F /* MusicRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicRoomViewController.m; path = EncloseView/RoomBezierAnim/MusicRoomViewController.m; sourceTree = "<group>"; };
 		484C5EF41E45CAAC009E56DF /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchViewController.h; path = SwitchViewController/SwitchViewController.h; sourceTree = "<group>"; };
 		484C5EF51E45CAAC009E56DF /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchViewController.m; path = SwitchViewController/SwitchViewController.m; sourceTree = "<group>"; };
 		48C84D511E1DF02E00F103A7 /* CYAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +78,10 @@
 		48C84D8A1E1E69A600F103A7 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "ThirdParties/Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		48C84D8B1E1E69A600F103A7 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "ThirdParties/Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		48C84D8C1E1E69A600F103A7 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "ThirdParties/Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		48CF304B1E55756B0049248C /* FlowerBezierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerBezierView.h; path = EncloseView/RoomBezierAnim/FlowerBezierView.h; sourceTree = "<group>"; };
+		48CF304C1E55756B0049248C /* FlowerBezierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowerBezierView.m; path = EncloseView/RoomBezierAnim/FlowerBezierView.m; sourceTree = "<group>"; };
+		48CF30501E5576A60049248C /* musicRoom_scatter_flower@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "musicRoom_scatter_flower@2x.png"; path = "Resources/EncloseView/RoomBezierAnim/musicRoom_scatter_flower@2x.png"; sourceTree = "<group>"; };
+		48CF30511E5576A60049248C /* musicRoom_scatter_flower@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "musicRoom_scatter_flower@3x.png"; path = "Resources/EncloseView/RoomBezierAnim/musicRoom_scatter_flower@3x.png"; sourceTree = "<group>"; };
 		48F017531E276194005A2206 /* room_musicBtn_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "room_musicBtn_bg@2x.png"; path = "Resources/RoomMusicButton/room_musicBtn_bg@2x.png"; sourceTree = "<group>"; };
 		48F017541E276194005A2206 /* room_musicBtn_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "room_musicBtn_bg@3x.png"; path = "Resources/RoomMusicButton/room_musicBtn_bg@3x.png"; sourceTree = "<group>"; };
 		48F017551E276194005A2206 /* room_musicBtn_opened@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "room_musicBtn_opened@2x.png"; path = "Resources/RoomMusicButton/room_musicBtn_opened@2x.png"; sourceTree = "<group>"; };
@@ -91,6 +101,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		480CC98A1E52F11200FF471F /* RoomBezierAnim */ = {
+			isa = PBXGroup;
+			children = (
+				480CC98B1E52F17400FF471F /* MusicRoomViewController.h */,
+				480CC98C1E52F17400FF471F /* MusicRoomViewController.m */,
+				48CF304B1E55756B0049248C /* FlowerBezierView.h */,
+				48CF304C1E55756B0049248C /* FlowerBezierView.m */,
+			);
+			name = RoomBezierAnim;
+			sourceTree = "<group>";
+		};
 		484C5EF31E45CA56009E56DF /* SwitchViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,9 +231,27 @@
 			name = Masonry;
 			sourceTree = "<group>";
 		};
+		48CF304E1E55767F0049248C /* EncloseView */ = {
+			isa = PBXGroup;
+			children = (
+				48CF304F1E5576850049248C /* RoomBezierAnim */,
+			);
+			name = EncloseView;
+			sourceTree = "<group>";
+		};
+		48CF304F1E5576850049248C /* RoomBezierAnim */ = {
+			isa = PBXGroup;
+			children = (
+				48CF30501E5576A60049248C /* musicRoom_scatter_flower@2x.png */,
+				48CF30511E5576A60049248C /* musicRoom_scatter_flower@3x.png */,
+			);
+			name = RoomBezierAnim;
+			sourceTree = "<group>";
+		};
 		48F017491E276134005A2206 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				48CF304E1E55767F0049248C /* EncloseView */,
 				48F017521E276185005A2206 /* RoomMusicButton */,
 			);
 			name = Resources;
@@ -232,6 +271,7 @@
 		48F0175B1E27628B005A2206 /* EncloseView */ = {
 			isa = PBXGroup;
 			children = (
+				480CC98A1E52F11200FF471F /* RoomBezierAnim */,
 				48F0175C1E276296005A2206 /* RoomMusicButton */,
 			);
 			name = EncloseView;
@@ -308,8 +348,10 @@
 				48F0175A1E276194005A2206 /* room_musicBtn_opened@3x.png in Resources */,
 				48C84D641E1DF02E00F103A7 /* LaunchScreen.storyboard in Resources */,
 				48F017571E276194005A2206 /* room_musicBtn_bg@2x.png in Resources */,
+				48CF30531E5576A60049248C /* musicRoom_scatter_flower@3x.png in Resources */,
 				48C84D611E1DF02E00F103A7 /* Assets.xcassets in Resources */,
 				48F017591E276194005A2206 /* room_musicBtn_opened@2x.png in Resources */,
+				48CF30521E5576A60049248C /* musicRoom_scatter_flower@2x.png in Resources */,
 				48F017581E276194005A2206 /* room_musicBtn_bg@3x.png in Resources */,
 				48C84D5F1E1DF02E00F103A7 /* Main.storyboard in Resources */,
 			);
@@ -324,6 +366,7 @@
 			files = (
 				48C84D8F1E1E69A600F103A7 /* MASConstraintMaker.m in Sources */,
 				48C84D711E1E328300F103A7 /* MusicInOrderView.m in Sources */,
+				480CC98D1E52F17400FF471F /* MusicRoomViewController.m in Sources */,
 				484C5EF61E45CAAC009E56DF /* SwitchViewController.m in Sources */,
 				48C84D5C1E1DF02E00F103A7 /* ViewController.m in Sources */,
 				48C84D8E1E1E69A600F103A7 /* MASConstraint.m in Sources */,
@@ -335,6 +378,7 @@
 				48C84D911E1E69A600F103A7 /* MASViewAttribute.m in Sources */,
 				48C84D951E1E69A600F103A7 /* View+MASAdditions.m in Sources */,
 				48C84D591E1DF02E00F103A7 /* AppDelegate.m in Sources */,
+				48CF304D1E55756B0049248C /* FlowerBezierView.m in Sources */,
 				48C84D561E1DF02E00F103A7 /* main.m in Sources */,
 				48C84D8D1E1E69A600F103A7 /* MASCompositeConstraint.m in Sources */,
 				48C84D941E1E69A600F103A7 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

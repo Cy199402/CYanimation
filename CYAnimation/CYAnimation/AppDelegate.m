@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SwitchViewController.h"
+#import "MusicRoomViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     // 2.设置根ViewController
-    SwitchViewController *mainVC = [[SwitchViewController alloc] init];
+    MusicRoomViewController *mainVC = [[MusicRoomViewController alloc] init];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
     self.window.rootViewController = navVC;
     
