@@ -41,15 +41,16 @@
 
 #pragma mark - private methods
 - (void)addSubviews {
-    [self addSubview:self.flowerView];
     [self addSubview:self.shadowView];
+    [self addSubview:self.flowerView];
 }
 
 - (void)autoLayout {
-    [self.flowerView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.shadowView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.centerY.equalTo(self);
     }];
-    [self.shadowView mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    [self.flowerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.centerY.equalTo(self);
     }];
 }
@@ -78,7 +79,7 @@
 
 #pragma mark - action methods
 - (void)clickFlowerView {
-    //[self playFlowerCurPathAnim];
+    [self playFlowerCurPathAnim];
     [self playFlowerShineAnim];
 }
 
@@ -134,7 +135,6 @@
     [group setAnimations:[NSArray arrayWithObjects:alphaAnimation, scaleAnimation, pathAnimation, nil]];
     group.duration = 2.0f;
     group.delegate = self;
-    [group setValue:animView forKey:@"imageViewBeingAnimated"];
     [animView.layer addAnimation:group forKey:@"savingAnimation"];
 }
 
@@ -143,6 +143,23 @@
     self.shadowView.layer.shadowOffset = CGSizeMake(0, 0);
     self.shadowView.layer.shadowOpacity = 0.8;
     self.shadowView.layer.shadowRadius = 10;
+    
+    CABasicAnimation *alphaAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    alphaAnimation.toValue = @(0);
+    alphaAnimation.autoreverses = YES;
+    alphaAnimation.duration = 3.0f;
+    alphaAnimation.delegate = self;
+    [self.shadowView.layer addAnimation:alphaAnimation forKey:@"alphaAnimation"];
+    
+    [UIView animateWithDuration:1.5f animations:^{
+        self.shadowView.alpha = 1;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:1.5f animations:^{
+                self.shadowView.alpha = 0;
+            }];
+        }
+    }];
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
@@ -153,6 +170,7 @@
                 break;
             }
         }
+
     }
 }
 
@@ -188,6 +206,7 @@
     if (!_shadowView) {
         UIImage *shadowView = [self imageMaskedWithColor:[UIColor whiteColor] strokeColor:[UIColor whiteColor]];
         _shadowView = [[UIImageView alloc] initWithImage:shadowView];
+        _shadowView.alpha = 0;
     }
     return _shadowView;
 }
