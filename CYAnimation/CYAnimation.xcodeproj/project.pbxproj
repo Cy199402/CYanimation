@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48005C8A1E56906800ADB4EA /* BNRHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48005C891E56906800ADB4EA /* BNRHypnosisView.m */; };
 		480CC98D1E52F17400FF471F /* MusicRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 480CC98C1E52F17400FF471F /* MusicRoomViewController.m */; };
 		484C5EF61E45CAAC009E56DF /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484C5EF51E45CAAC009E56DF /* SwitchViewController.m */; };
 		48C84D561E1DF02E00F103A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C84D551E1DF02E00F103A7 /* main.m */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48005C881E56906800ADB4EA /* BNRHypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRHypnosisView.h; path = EncloseView/RoomBezierAnim/BNRHypnosisView.h; sourceTree = "<group>"; };
+		48005C891E56906800ADB4EA /* BNRHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRHypnosisView.m; path = EncloseView/RoomBezierAnim/BNRHypnosisView.m; sourceTree = "<group>"; };
 		480CC98B1E52F17400FF471F /* MusicRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicRoomViewController.h; path = EncloseView/RoomBezierAnim/MusicRoomViewController.h; sourceTree = "<group>"; };
 		480CC98C1E52F17400FF471F /* MusicRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicRoomViewController.m; path = EncloseView/RoomBezierAnim/MusicRoomViewController.m; sourceTree = "<group>"; };
 		484C5EF41E45CAAC009E56DF /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchViewController.h; path = SwitchViewController/SwitchViewController.h; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				480CC98C1E52F17400FF471F /* MusicRoomViewController.m */,
 				48CF304B1E55756B0049248C /* FlowerBezierView.h */,
 				48CF304C1E55756B0049248C /* FlowerBezierView.m */,
+				48005C881E56906800ADB4EA /* BNRHypnosisView.h */,
+				48005C891E56906800ADB4EA /* BNRHypnosisView.m */,
 			);
 			name = RoomBezierAnim;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				48C84D5C1E1DF02E00F103A7 /* ViewController.m in Sources */,
 				48C84D8E1E1E69A600F103A7 /* MASConstraint.m in Sources */,
 				48C84D961E1E69A600F103A7 /* ViewController+MASAdditions.m in Sources */,
+				48005C8A1E56906800ADB4EA /* BNRHypnosisView.m in Sources */,
 				48F0175F1E2765A1005A2206 /* RoomMusicButton.m in Sources */,
 				48C84D901E1E69A600F103A7 /* MASLayoutConstraint.m in Sources */,
 				48C84D931E1E69A600F103A7 /* NSArray+MASAdditions.m in Sources */,
