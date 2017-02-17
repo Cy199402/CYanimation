@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSMutableArray <NSNumber *> *tags;
 @property (nonatomic, strong) NSMutableArray <NSString *> *timingFunctions;
 @property (nonatomic, strong) UIImageView *shadowView;
+@property (nonatomic, assign) BOOL isShineStoped;
 
 @end
 
@@ -28,6 +29,7 @@
     if (self = [super init]) {
         self.backgroundColor = [UIColor lightGrayColor];
         self.flowerTag = 0;
+        self.isShineStoped = YES;
         [self addSubviews];
         [self autoLayout];
         
@@ -79,8 +81,15 @@
 
 #pragma mark - action methods
 - (void)clickFlowerView {
+    if (self.isShineStoped) {
+        [self performSelector:@selector(stopShineAnim) withObject:nil afterDelay:3.0f];
+        [self playFlowerShineAnim];
+    } else {
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopShineAnim) object:nil];
+        [self performSelector:@selector(stopShineAnim) withObject:nil afterDelay:3.0f];
+    }
+    
     [self playFlowerCurPathAnim];
-    [self playFlowerShineAnim];
 }
 
 #pragma mark - animation methods
@@ -126,7 +135,6 @@
     
     int timingIndex = arc4random() % 5;
     
-    NSLog(@"self.timingFunctions[timingIndex] -- %@", self.timingFunctions[timingIndex]);
     NSString *timing = self.timingFunctions[timingIndex];
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.timingFunction = [CAMediaTimingFunction functionWithName:timing];
@@ -139,27 +147,21 @@
 }
 
 - (void)playFlowerShineAnim {
+    self.isShineStoped = NO;
+    
     self.shadowView.layer.shadowColor = [UIColor redColor].CGColor;
     self.shadowView.layer.shadowOffset = CGSizeMake(0, 0);
     self.shadowView.layer.shadowOpacity = 0.8;
     self.shadowView.layer.shadowRadius = 10;
+    self.shadowView.alpha = 1;
     
     CABasicAnimation *alphaAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     alphaAnimation.toValue = @(0);
     alphaAnimation.autoreverses = YES;
     alphaAnimation.duration = 3.0f;
+    alphaAnimation.repeatCount = HUGE_VALF;
     alphaAnimation.delegate = self;
     [self.shadowView.layer addAnimation:alphaAnimation forKey:@"alphaAnimation"];
-    
-    [UIView animateWithDuration:1.5f animations:^{
-        self.shadowView.alpha = 1;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [UIView animateWithDuration:1.5f animations:^{
-                self.shadowView.alpha = 0;
-            }];
-        }
-    }];
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
@@ -172,6 +174,12 @@
         }
 
     }
+}
+
+- (void)stopShineAnim {
+    [self.shadowView.layer removeAllAnimations];
+    self.shadowView.alpha = 0;
+    self.isShineStoped = YES;
 }
 
 #pragma mark - setters and getters
