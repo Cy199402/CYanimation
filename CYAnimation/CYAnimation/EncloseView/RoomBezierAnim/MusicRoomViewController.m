@@ -29,7 +29,7 @@
     self.view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:self.bezierView];
     [self.bezierView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.bottom.equalTo(self.view);
+        make.centerX.centerY.equalTo(self.view);
         make.width.equalTo(@(2 * self.bezierView.flowerView.image.size.width));
         make.height.equalTo(@(2 * self.bezierView.flowerView.image.size.height));
     }];
