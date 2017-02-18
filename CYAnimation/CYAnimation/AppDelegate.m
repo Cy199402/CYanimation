@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MusicRoomViewController.h"
+#import "YWRoomMusicSendGiftViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     // 2.设置根ViewController
-    MusicRoomViewController *mainVC = [[MusicRoomViewController alloc] init];
+    YWRoomMusicSendGiftViewController *mainVC = [[YWRoomMusicSendGiftViewController alloc] init];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
     self.window.rootViewController = navVC;
     
