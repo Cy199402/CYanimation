@@ -104,6 +104,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48005C9E1E56F23D00ADB4EA /* AnimationQueue */ = {
+			isa = PBXGroup;
+			children = (
+				48005CA01E56F33600ADB4EA /* ViewController */,
+				48005C9F1E56F24C00ADB4EA /* Data */,
+			);
+			name = AnimationQueue;
+			sourceTree = "<group>";
+		};
+		48005C9F1E56F24C00ADB4EA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		48005CA01E56F33600ADB4EA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				48005CA11E56F33E00ADB4EA /* View */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		48005CA11E56F33E00ADB4EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		480CC98A1E52F11200FF471F /* MusicRoomGift */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +176,7 @@
 		48C84D531E1DF02E00F103A7 /* CYAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				48005C9E1E56F23D00ADB4EA /* AnimationQueue */,
 				484C5EF31E45CA56009E56DF /* SwitchViewController */,
 				48F0175B1E27628B005A2206 /* EncloseView */,
 				48F017491E276134005A2206 /* Resources */,
